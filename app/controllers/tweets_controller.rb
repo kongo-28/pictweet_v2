@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new
+    @tweet = Tweet.includes(:user)
   end
 
   def create
