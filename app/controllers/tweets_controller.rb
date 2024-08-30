@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.includes(:user)
+    @tweet = Tweet.includes(:user).order("created_at DESC")
   end
 
   def create
